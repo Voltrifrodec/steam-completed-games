@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Steam Completed games</title>
+    </head>
+    <body>
+        <h1>Steam Completed games</h1>
+        <div class="ListStatistics">
+            <span><bold-text>Perfect Steam games</bold-text>: <perfect-games-counter>0</perfect-games-counter></span>
+            <span><bold-text>Not perfect Steam games (yet)</bold-text>: <not-perfect-games-counter>0</not-perfect-games-counter></span>
+            <span><bold-text>Games without Steam achievements yet finished</bold-text>: <no-achievements-games-counter>0</no-achievements-games-counter></span>
+            <span><bold-text>Total amount of games</bold-text>: <games-total>0</games-total></span>
+        </div>
+        <div class="TableWrapper">
+            <better-table>
+                <table-header>
+                    <header-cell>No.</header-cell>
+                    <!-- <header-cell>Status<super-text>[?]</super-text></header-cell> -->
+                    <header-cell>Game's Name</header-cell>
+                    <header-cell>Playtime</header-cell>
+                    <header-cell>Notes</header-cell>
+                </table-header>
+                <table-row v-for="(item,index) in game_data">
+                    <table-cell class="GameNumber"><counter-element></table-cell>
+                    <!-- <table-cell class="GameStatus"></table-cell> -->
+                    <table-cell class="GameName" :class="item.additional_classes">
+                        <status-icon :class="item.game_status">
+                            
+                        </status-icon>
+                        <a :href="item.game_steam_url" target="_blank">{{item.game_name}}</a>
+                    </table-cell>
+                    <table-cell class="GamePlaytime">{{item.game_playtime}}</table-cell>
+                    <table-cell class="GameNotes">{{item.game_notes}}</table-cell>
+                </table-row>
+            </better-table>
+        </div>
+
+        <!-- <div class="TableWindow">
+            <div class="BetterTable">
+                <div class="BetterTableRow TopTableRow">
+                    <div class="HeaderCell GameNumberStatic">
+                        No.
+                    </div>
+                    <div class="HeaderCell GameName">
+                        Game's name
+                    </div>
+                    <div class="HeaderCell GamePlaytime">
+                        Playtime
+                    </div>
+                    <div class="HeaderCell GameNotes">
+                        Notes
+                    </div>
+                    <div class="HeaderCell GameStatus">
+                        Status<span class="ExplanationTextSuperscript">[?]</span> 
+                    </div>
+                </div>
+                <div class="BetterTableROw"></div>
+                <div class="BetterTableRow">
+                    <div class="GameNumber CountingDiv">
+                        <game-number></game-number>
+                    </div>
+                    <div class="GameName">Half-Life</div>
+                    <div class="GamePlaytime">200hrs</div>
+                    <div class="GameNotes">NaN</div>
+                    <div class="GameStatus"><div class="StatusIcon NotPerfectYet"></div></div>
+                </div>
+                <div class="BetterTableRow">
+                    <div class="GameNumber CountingDiv">
+                        <game-number></game-number>
+                    </div>
+                    <div class="GameName">Half-Life</div>
+                    <div class="GamePlaytime">200hrs</div>
+                    <div class="GameNotes">NaN</div>
+                    <div class="GameStatus"><div class="StatusIcon NotPerfectYet"></div></div>
+                </div>
+                <div class="BetterTableRow">
+                    <div class="GameNumber CountingDiv">
+                        <game-number></game-number>
+                    </div>
+                    <div class="GameName">Half-Life</div>
+                    <div class="GamePlaytime">200hrs</div>
+                    <div class="GameNotes">NaN</div>
+                    <div class="GameStatus"><div class="StatusIcon NotPerfectYet"></div></div>
+                </div>
+                <div class="BetterTableRow">
+                    <div class="GameNumber CountingDiv">
+                        <game-number></game-number>
+                    </div>
+                    <div class="GameName">Half-Life</div>
+                    <div class="GamePlaytime">200hrs</div>
+                    <div class="GameNotes">NaN</div>
+                    <div class="GameStatus"><div class="StatusIcon NotPerfectYet"></div></div>
+                </div>
+                <div class="BetterTableRow">
+                    <div class="GameNumber CountingDiv">
+                        <game-number></game-number>
+                    </div>
+                    <div class="GameName">Half-Life</div>
+                    <div class="GamePlaytime">200hrs</div>
+                    <div class="GameNotes">NaN</div>
+                    <div class="GameStatus"><div class="StatusIcon NotPerfectYet"></div></div>
+                </div>
+                <div class="BetterTableRow">
+                    <div class="GameNumber CountingDiv">
+                        <game-number></game-number>
+                    </div>
+                    <div class="GameName">Half-Life</div>
+                    <div class="GamePlaytime">200hrs</div>
+                    <div class="GameNotes">NaN</div>
+                    <div class="GameStatus"><div class="StatusIcon NotPerfectYet"></div></div>
+                </div>
+                <div class="BetterTableRow">
+                    <div class="GameNumber CountingDiv">
+                        <game-number></game-number>
+                    </div>
+                    <div class="GameName">Half-Life</div>
+                    <div class="GamePlaytime">200hrs</div>
+                    <div class="GameNotes">NaN</div>
+                    <div class="GameStatus"><div class="StatusIcon NotPerfectYet"></div></div>
+                </div>
+                <div class="BetterTableRow">
+                    <div class="GameNumber CountingDiv">
+                        <game-number></game-number>
+                    </div>
+                    <div class="GameName">Half-Life</div>
+                    <div class="GamePlaytime">200hrs</div>
+                    <div class="GameNotes">NaN</div>
+                    <div class="GameStatus"><div class="StatusIcon NotPerfectYet"></div></div>
+                </div>
+                <div class="BetterTableRow">
+                    <div class="GameNumber CountingDiv">
+                        <game-number></game-number>
+                    </div>
+                    <div class="GameName">Half-Life</div>
+                    <div class="GamePlaytime">200hrs</div>
+                    <div class="GameNotes">NaN</div>
+                    <div class="GameStatus"><div class="StatusIcon NotPerfectYet"></div></div>
+                </div>
+                <div class="BetterTableRow">
+                    <div class="GameNumber CountingDiv">
+                        <game-number></game-number>
+                    </div>
+                    <div class="GameName">Half-Life</div>
+                    <div class="GamePlaytime">200hrs</div>
+                    <div class="GameNotes">NaN</div>
+                    <div class="GameStatus"><div class="StatusIcon NotPerfectYet"></div></div>
+                </div>
+                <div class="BetterTableRow">
+                    <div class="GameNumber CountingDiv">
+                        <game-number></game-number>
+                    </div>
+                    <div class="GameName">Half-Life</div>
+                    <div class="GamePlaytime">200hrs</div>
+                    <div class="GameNotes">NaN</div>
+                    <div class="GameStatus"><div class="StatusIcon NotPerfectYet"></div></div>
+                </div>
+                <div class="BetterTableRow">
+                    <div class="GameNumber CountingDiv">
+                        <game-number></game-number>
+                    </div>
+                    <div class="GameName">Half-Life</div>
+                    <div class="GamePlaytime">200hrs</div>
+                    <div class="GameNotes">NaN</div>
+                    <div class="GameStatus"><div class="StatusIcon NotPerfectYet"></div></div>
+                </div>
+                <div class="BetterTableRow">
+                    <div class="GameNumber CountingDiv">
+                        <game-number></game-number>
+                    </div>
+                    <div class="GameName">Half-Life</div>
+                    <div class="GamePlaytime">200hrs</div>
+                    <div class="GameNotes">NaN</div>
+                    <div class="GameStatus"><div class="StatusIcon NotPerfectYet"></div></div>
+                </div>
+                <div class="BetterTableRow">
+                    <div class="GameNumber CountingDiv">
+                        <game-number></game-number>
+                    </div>
+                    <div class="GameName">Half-Life</div>
+                    <div class="GamePlaytime">200hrs</div>
+                    <div class="GameNotes">NaN</div>
+                    <div class="GameStatus"><div class="StatusIcon NotPerfectYet"></div></div>
+                </div>
+                <div class="BetterTableRow">
+                    <div class="GameNumber CountingDiv">
+                        <game-number></game-number>
+                    </div>
+                    <div class="GameName">Half-Life</div>
+                    <div class="GamePlaytime">200hrs</div>
+                    <div class="GameNotes">NaN</div>
+                    <div class="GameStatus"><div class="StatusIcon NotPerfectYet"></div></div>
+                </div>
+                <div class="BetterTableRow">
+                    <div class="GameNumber CountingDiv">
+                        <game-number></game-number>
+                    </div>
+                    <div class="GameName">Half-Life</div>
+                    <div class="GamePlaytime">200hrs</div>
+                    <div class="GameNotes">NaN</div>
+                    <div class="GameStatus"><div class="StatusIcon NotPerfectYet"></div></div>
+                </div>
+                <div class="BetterTableRow">
+                    <div class="GameNumber CountingDiv">
+                        <game-number></game-number>
+                    </div>
+                    <div class="GameName">Half-Life</div>
+                    <div class="GamePlaytime">200hrs</div>
+                    <div class="GameNotes">NaN</div>
+                    <div class="GameStatus"><div class="StatusIcon NotPerfectYet"></div></div>
+                </div>
+                <div class="BetterTableRow">
+                    <div class="GameNumber CountingDiv">
+                        <game-number></game-number>
+                    </div>
+                    <div class="GameName">Half-Life</div>
+                    <div class="GamePlaytime">200hrs</div>
+                    <div class="GameNotes">NaN</div>
+                    <div class="GameStatus"><div class="StatusIcon NotPerfectYet"></div></div>
+                </div>
+                <div class="BetterTableRow">
+                    <div class="GameNumber CountingDiv">
+                        <game-number></game-number>
+                    </div>
+                    <div class="GameName">Half-Life</div>
+                    <div class="GamePlaytime">200hrs</div>
+                    <div class="GameNotes">NaN</div>
+                    <div class="GameStatus"><div class="StatusIcon NotPerfectYet"></div></div>
+                </div>
+                <div class="BetterTableRow">
+                    <div class="GameNumber CountingDiv">
+                        <game-number></game-number>
+                    </div>
+                    <div class="GameName">Half-Life</div>
+                    <div class="GamePlaytime">200hrs</div>
+                    <div class="GameNotes">NaN</div>
+                    <div class="GameStatus"><div class="StatusIcon NotPerfectYet"></div></div>
+                </div>
+                <div class="BetterTableRow">
+                    <div class="GameNumber CountingDiv">
+                        <game-number></game-number>
+                    </div>
+                    <div class="GameName">Half-Life</div>
+                    <div class="GamePlaytime">200hrs</div>
+                    <div class="GameNotes">NaN</div>
+                    <div class="GameStatus"><div class="StatusIcon NotPerfectYet"></div></div>
+                </div>
+                <div class="BetterTableRow">
+                    <div class="GameNumber CountingDiv">
+                        <game-number></game-number>
+                    </div>
+                    <div class="GameName">Half-Life</div>
+                    <div class="GamePlaytime">200hrs</div>
+                    <div class="GameNotes">NaN</div>
+                    <div class="GameStatus"><div class="StatusIcon NotPerfectYet"></div></div>
+                </div>
+                <div class="BetterTableRow">
+                    <div class="GameNumber CountingDiv">
+                        <game-number></game-number>
+                    </div>
+                    <div class="GameName">Half-Life</div>
+                    <div class="GamePlaytime">200hrs</div>
+                    <div class="GameNotes">NaN</div>
+                    <div class="GameStatus"><div class="StatusIcon NotPerfectYet"></div></div>
+                </div>
+                <div class="BetterTableRow">
+                    <div class="GameNumber CountingDiv">
+                        <game-number></game-number>
+                    </div>
+                    <div class="GameName">Half-Life</div>
+                    <div class="GamePlaytime">200hrs</div>
+                    <div class="GameNotes">NaN</div>
+                    <div class="GameStatus"><div class="StatusIcon NotPerfectYet"></div></div>
+                </div>
+                <!-- <div class="BetterTableRow">
+                    <div class="GameNumber CountingDiv"><div></div></div>
+                    <div class="GameName">Half-Life</div>
+                    <div class="GamePlaytime">200hrs</div>
+                    <div class="GameNotes">NaN</div>
+                    <div class="GameStatus"><div class="StatusIcon NotPerfectYet"></div></div>
+                </div>
+                <div class="BetterTableRow">
+                    <div class="GameNumber CountingDiv">x</div>
+                    <div class="GameName">The Elder Scrolls V: Skyrim Special Edition</div>
+                    <div class="GamePlaytime">453,415hrs</div>
+                    <div class="GameNotes">Perfect game experience!</div>
+                    <div class="GameStatus"><div class="StatusIcon PerfectYet"></div></div>
+                </div>
+            </div>
+        </div> -->
+        <!-- <li>
+                <ul>
+                <span class="GameNumber FirstRow">No.</span>
+                <span class="GameName FirstRow">Name of the game</span>
+                <span class="GamePlaytime FirstRow">Playtime</span>
+                <span class="GameNotes FirstRow">Notes</span>
+                <p class="GameStatus FirstRow">Status <span class="ExplanationTextSmall">[?]</span></p>
+            </li> -->
+            <!-- <li>
+                <span class="GameNumber">001.</span>
+                <span class="GameName">Half-Life 2</span>
+                <span class="GamePlayTime">42.1hrs</span>
+                <span class="GameNotes">Perfect game, very good!</span>
+                <span class="GameLink"><a href="https://store.steampowered.com/app/220/HalfLife_2/" target="_blank">Steam</a></span>
+                <span class="GameStatus">
+                    <div class="StatusIcon PerfectGameStatus"></div>
+                </span>
+            </li> 
+        </ul> -->
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.min.js'></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="./game-database.js"></script>
+        <script>
+            var x = 0;
+            $(document).ready(function(){
+                $('.GameNumber').each(function() {
+                    x++;
+                    if(x < 100 && x < 10)
+                        $(this).html('00' + $(this).html());
+                        if(x < 100 && x >= 10)
+                        $(this).html('0' + $(this).html());
+                });
+            });
+        </script>
+    </body>
+</html>

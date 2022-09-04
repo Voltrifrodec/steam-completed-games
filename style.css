@@ -1,0 +1,309 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-color: #000;
+    color: #fff;
+}
+
+ul {
+    list-style-type: none;
+    width: 100%;
+    background-color: #f00;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; */
+    padding: 0;
+}
+li {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 0;
+}
+span {
+    display: block;
+}
+h1 {
+    padding-bottom: .5rem;
+}
+
+/* Better Table Attributes */
+.TableWrapper {
+    width: 95%;
+    margin: 3vw auto;
+    background-color: #555;
+}
+better-table {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-family: monospace;
+    font-size: larger;
+    border: 3px solid #333;
+    /* box-shadow: 4px 4px 4px #999; */
+}
+super-text {
+    vertical-align: super;
+    font-size: xx-small;
+    color: #f00;
+}
+table-header {
+    padding: .6rem .4rem;
+    text-align: center;
+    background-color: #222;
+}
+table-cell,header-cell {
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+}
+table-cell {
+    padding: .2rem .4rem;
+}
+table-header,table-row {
+    display: grid;
+    grid-template-columns: 10% 47% 17% 26%;
+}
+.GameNumber {
+    min-width: 10%;
+    text-align: center;
+}
+.GameName {
+    min-width: 35%;
+    display: flex;
+}
+.GameName a {
+    color: #fff;
+    text-decoration: none;
+}
+.GameName a:hover {
+    color: #d00;
+}
+.no_demo a {
+    color: #000 !important;
+}
+.no_demo a:hover {
+    color: #333 !important;
+}
+
+.GamePlaytime {
+    min-width: 17%;
+    text-align: center;
+}
+.GameNotes {
+    min-width: 26%;
+    text-align: left;
+}
+.GameStatus {
+    min-width: 12%;
+    margin-left: auto;
+}
+better-table {
+    counter-reset: game-counter;
+}
+counter-element::before {
+    counter-increment: game-counter;
+    content: counter(game-counter);
+}
+.ListStatistics {
+    width: 95%;
+    margin: 0 auto;
+    font-family: monospace;
+}
+bold-text {
+    font-weight: bold;
+}
+status-icon {
+    /* border-radius: 50%; */
+    max-width: 20px;
+    min-width: 20px;
+    max-height: 20px;
+    min-height: 20px;
+    border: 1px solid #000;
+    margin-right: 1%;
+    /* box-shadow: 1px 5px 5px #111; */
+    filter: blur(50%);
+}
+.PerfectGame {
+    /* background: linear-gradient(to bottom, #0f0, #0c0, #050); */
+    background-color: #0f0;
+}
+.NotPerfectGame {
+    /* background: linear-gradient(to bottom, #f00, #c00, #500); */
+    background-color: #f00;
+}
+.NoAchievementsGame {
+    /* background: linear-gradient(to bottom, #f00, #c00, #500); */
+    background-color: #0ee;
+}
+
+@media screen and (min-width: 2000px) and (max-width: 9999px) {
+    .TableWrapper {
+        width: 100%;
+        margin: 0;
+    }
+}
+@media screen and (min-width: 0px) and (max-width: 900px) {
+    .TableWrapper {
+        width: 100%;
+        margin: 0;
+        font-size: xx-small;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Table attributes */
+/* .TableWindow {
+    width: 95%;
+    margin: 3vw auto;
+}
+.BetterTable {
+    min-width: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    Border
+    border: 2px solid #111;
+}
+@media screen and (min-width: 0px) and (max-width:600px) {
+    .TableWindow {
+        width: 100%;
+    }
+}
+.BetterTableRow {
+    display: flex;
+    width: inherit;
+}
+.BetterTableRow div {
+    text-align: center;
+    min-height: 16px;
+    background-color: #333;
+    font-family: monospace;
+    padding: 0.375rem 0;
+}
+.TopTableRow {
+    border-bottom: 2px solid #111;
+} */
+
+/* Table cell attributes - First row */
+/* .HeaderCell {
+    text-align: center;
+}
+.HeaderCell.GameStatus span {
+    display: unset;
+    vertical-align: super;
+    font-size: xx-small;
+    font-family: 'Times New Roman', Times, serif !important;
+}
+.BetterTable {
+    counter-reset: GameNumber;
+}
+game-number::before {
+    counter-increment: GameNumber;
+    content: counter(GameNumber);
+    list-style-type: decimal-leading-zero;
+}
+.GameNumber game-number:nth-child(10)::before {
+    content: "0" counter(GameNumber);
+}
+.GameNumberStatic,.GameNumber {
+    min-width: 10%;
+    background-color: #333;
+}
+.GameName {
+    min-width: 35%;
+}
+.GamePlaytime {
+    min-width: 15%;
+}
+.GameNotes {
+    min-width: 28%;
+}
+.GameStatus {
+    min-width: 12%;
+}
+.StatusIcon {
+    border-radius: 50%;
+    max-width: 16px;
+    min-width: 16px;
+    max-height: 16px;
+    min-height: 16px;
+    margin: 0 auto;
+    box-shadow: 1px 5px 5px #111;
+    filter: blur(50%);
+}
+.StatusIcon.NotPerfectYet {
+    background: linear-gradient(to bottom, #f00, #c00, #500);
+}
+.StatusIcon.PerfectYet {
+    background: linear-gradient(to bottom, #0f0, #0c0, #050);
+} */
+
+
+/* .FirstRow {
+    padding: 0;
+    text-align: center;
+}
+.ExplanationTextSmall {
+    vertical-align: super;
+    font-size: x-small;
+    color: #00f;
+}
+
+.GameNumber {
+    padding: 0 0.75rem;
+    min-width: 3%;
+    text-align: center;
+}
+.GameName {
+    max-width: 40%;
+    min-width: 40%;
+    padding: 16px;
+    background-color: #300;
+}
+.GameNotes {
+    background-color: #00f;
+    text-align: center;
+}
+.GameStatus {
+    min-width: 10%;
+    text-align: center;
+}
+.GamePlaytime {
+    min-width: 5%;
+}
+.GameStatus.FirstRow span {
+    display: unset;
+}
+.StatusIcon {
+    max-width: 16px;
+    min-width: 16px;
+    min-height: 16px;
+    border-radius: 50%;
+}
+.StatusIcon.NotPerfectGameStatus {
+    background-color: #f00;
+}
+.StatusIcon.PerfectGameStatus {
+    background-color: #0f0;
+} */
