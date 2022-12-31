@@ -682,7 +682,7 @@ const GAME_DATABASE = [
         additional_classes: ''
     },
     {
-        game_name: `Oik`,
+        game_name: `Oik 2`,
         game_playtime: NumberFormattingEN(44) + ' minutes',
         game_steam_url: `https://store.steampowered.com/app/611980/Oik_2/`,
         game_notes: ``,
