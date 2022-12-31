@@ -675,8 +675,16 @@ const GAME_DATABASE = [
     },
     {
         game_name: `Oik`,
-        game_playtime: NumberFormattingEN(0.6) + ' hours',
+        game_playtime: NumberFormattingEN(38) + ' minutes',
         game_steam_url: `https://store.steampowered.com/app/588970/Oik/`,
+        game_notes: ``,
+        game_status: STATUS_PERFECT.toString(),
+        additional_classes: ''
+    },
+    {
+        game_name: `Oik`,
+        game_playtime: NumberFormattingEN(44) + ' minutes',
+        game_steam_url: `https://store.steampowered.com/app/611980/Oik_2/`,
         game_notes: ``,
         game_status: STATUS_PERFECT.toString(),
         additional_classes: ''
@@ -959,6 +967,14 @@ const GAME_DATABASE = [
         game_steam_url: `https://store.steampowered.com/app/20900/The_Witcher_Enhanced_Edition_Directors_Cut/`,
         game_notes: `Enhanced Edition`,
         game_status: STATUS_NO_ACHIEVEMENTS.toString(),
+        additional_classes: ''
+    },
+    {
+        game_name: `TitTok 3 (Demo)`,
+        game_playtime: NumberFormattingEN(6) + ' minutes',
+        game_steam_url: `https://store.steampowered.com/app/2003220/TitTok_3/`,
+        game_notes: `Demo not available anymore`,
+        game_status: STATUS_IMPERFECT.toString(),
         additional_classes: ''
     },
     {

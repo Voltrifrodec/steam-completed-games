@@ -6,7 +6,7 @@
 
 > Steam profile link: [https://steamcommunity.com/id/voltaroo](https://steamcommunity.com/id/voltaroo)
 
-> Link to games list: [https://voltaroo.github.io/steam-completed-games](https://voltaroo.github.io/steam-completed-games)
+> Link to games list: [https://voltrifrodec.github.io/steam-completed-games](https://voltrifrodec.github.io/steam-completed-games)
 
 ### Notes
 
