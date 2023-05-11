@@ -542,7 +542,7 @@ const GAME_DATABASE = [
         game_playtime: NumberFormattingEN(0),
         game_steam_url: `https://store.steampowered.com/app/1408720/Krunker/`,
         game_notes: ``,
-        game_status: STATUS_IMPERFECT.toString(),
+        game_status: STATUS_PERFECT.toString(),
         additional_classes: ''
     },
     {
@@ -1006,7 +1006,7 @@ const GAME_DATABASE = [
         game_playtime: NumberFormattingEN(0),
         game_steam_url: `https://store.steampowered.com/app/1369320/Virtual_Cottage/`,
         game_notes: ``,
-        game_status: STATUS_IMPERFECT.toString(),
+        game_status: STATUS_PERFECT.toString(),
         additional_classes: ''
     },
     {
