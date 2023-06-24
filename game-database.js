@@ -914,6 +914,14 @@ const GAME_DATABASE = [
         additional_classes: ''
     },
     {
+        game_name: `The Monster Inside`,
+        game_playtime: NumberFormattingEN(12) + ' minutes',
+        game_steam_url: `https://store.steampowered.com/app/665490/The_Monster_Inside/`,
+        game_notes: ``,
+        game_status: STATUS_PERFECT.toString(),
+        additional_classes: ''
+    },
+    {
         game_name: `The Plan`,
         game_playtime: NumberFormattingEN(0),
         game_steam_url: `https://store.steampowered.com/app/250600/The_Plan/`,
