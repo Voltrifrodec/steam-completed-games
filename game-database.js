@@ -882,6 +882,14 @@ const GAME_DATABASE = [
         additional_classes: ''
     },
     {
+        game_name: `The BUTTON by Elendow`,
+        game_playtime: NumberFormattingEN(35) + " minutes",
+        game_steam_url: `https://store.steampowered.com/app/1999740/THE_BUTTON_by_Elendow/`,
+        game_notes: ``,
+        game_status: STATUS_IMPERFECT.toString(),
+        additional_classes: ''
+    },,
+    {
         game_name: `The Cursed Tower`,
         game_playtime: NumberFormattingEN(0),
         game_steam_url: `https://store.steampowered.com/app/705370/The_Cursed_Tower/`,
