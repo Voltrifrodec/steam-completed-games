@@ -888,7 +888,7 @@ const GAME_DATABASE = [
         game_notes: ``,
         game_status: STATUS_IMPERFECT.toString(),
         additional_classes: ''
-    },,
+    },
     {
         game_name: `The Cursed Tower`,
         game_playtime: NumberFormattingEN(0),
