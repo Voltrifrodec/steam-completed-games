@@ -122,6 +122,14 @@ const GAME_DATABASE = [
         additional_classes: ''
     },
     {
+        game_name: `Andarilho`,
+        game_playtime: NumberFormattingEN(2.6) + "hours",
+        game_steam_url: `https://store.steampowered.com/app/450860/Andarilho/`,
+        game_notes: ``,
+        game_status: STATUS_PERFECT.toString(),
+        additional_classes: ''
+    },
+    {
         game_name: `Antenna`,
         game_playtime: NumberFormattingEN(0),
         game_steam_url: `https://store.steampowered.com/app/443580/Antenna/`,
